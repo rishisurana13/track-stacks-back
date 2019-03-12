@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2) do
+ActiveRecord::Schema.define(version: 2019_03_12_153922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accounts", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "day_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["day_id"], name: "index_accounts_on_day_id"
+    t.index ["user_id"], name: "index_accounts_on_user_id"
+  end
+
+  create_table "days", force: :cascade do |t|
+    t.string "today"
+    t.date "date"
+    t.integer "spend"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_days_on_user_id"
+  end
 
   create_table "examples", force: :cascade do |t|
     t.text "text", null: false
@@ -29,9 +48,15 @@ ActiveRecord::Schema.define(version: 2) do
     t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["token"], name: "index_users_on_token", unique: true
+    t.index ["user_id"], name: "index_users_on_user_id"
   end
 
+  add_foreign_key "accounts", "days"
+  add_foreign_key "accounts", "users"
+  add_foreign_key "days", "users"
   add_foreign_key "examples", "users"
+  add_foreign_key "users", "users"
 end
