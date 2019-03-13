@@ -13,9 +13,16 @@ class UsersController < OpenReadController
     end
   end
 
-  def show
+  def index
     @users = User.all
     render json: @users
+  end
+
+  def show
+    @user = User.find(params[:id])
+    render json: @user
+
+
   end
 
   # POST '/sign-in'

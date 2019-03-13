@@ -9,8 +9,7 @@ curl "http://localhost:4741/days" \
     "day": {
       "today": "'"${DAY}"'",
       "date": "'"${DATE}"'",
-      "spend": "'"${SPEND}"'",
-      "user_id": "'"${ID}"'"
+      "spend": "'"${SPEND}"'"
 
 
 

@@ -15,7 +15,7 @@ class DaysController < OpenReadController
 
   # POST /days
   def create
-    @day = current_user.days.new(day_params)
+    @day = current_user.days.build(day_params)
 
     if @day.save
       render json: @day, status: :created, location: @day
@@ -37,6 +37,11 @@ class DaysController < OpenReadController
   # DELETE /days/1
   def destroy
     @day.destroy
+  end
+
+  def find
+    @day = Day.find(params[:id])
+
   end
 
   private
