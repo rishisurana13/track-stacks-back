@@ -11,7 +11,7 @@ What is your project idea?  How did you come up with it? Why? Who would use it?
 ```md
 My project idea is a webapp designed to track how much your daily food incidentals are by entering how much you have spent in one day. A lot of it could be saved -- I am witnessing a culture that normalizes eating outside food and reduces the will to prepare and cook ones own food, which is a healthier choice, in many aspects including a financial one. From my own experience,  it is an eye opener. My target market would be college (and above) students and young professionals, as this demographic's habits will determine future spending habits in respect to food/meals.
 ```
-Back end respository: https://github.com/rishisurana13/track-stacks-back
+front end respository: https://github.com/rishisurana13/track-stacks-client
 
 ## Write between 3-5 user stories
 
