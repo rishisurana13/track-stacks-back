@@ -1,8 +1,5 @@
-# TRACK STACKS
-
-# BACK END
-# Full Stack Project Practice
-
+# TRACK STACKS BACK END
+This is the respository for the TrackStacks webapp back-end.
 
 ## Project Idea
 
