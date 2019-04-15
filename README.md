@@ -68,30 +68,5 @@ https://imgur.com/a/xKVY2SB
 + Node.js
 + Ruby on Rails
 
-## Timetable
-
-Write a basic timetable for yourself, you don't have to stick to it but it
-helps to go in with a plan.
-
-```md
-+ plan out website and features, create wireframe for all relevant pages
-+ make sure auth is working
-+ create db
-+ create classes/modify controllers to create rows and manipulate info(average)
-+ test
-+ link db and auth
-+ test
-+ create front end using html
-+ basic styling
-+ link to backend
-+ test
-+ restyle to fit theme of choice
-+ render graphing tools for UI
-+ test
-+ functionality for UI (hide/show, auth, etc)
-+ test
-+ final UI/backend revisions
-+ test
-
 
 ```
