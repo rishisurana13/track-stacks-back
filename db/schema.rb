@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_12_181745) do
+ActiveRecord::Schema.define(version: 2019_04_15_021500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,7 +58,9 @@ ActiveRecord::Schema.define(version: 2019_04_12_181745) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "meals_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["meals_id"], name: "index_users_on_meals_id"
     t.index ["token"], name: "index_users_on_token", unique: true
     t.index ["user_id"], name: "index_users_on_user_id"
   end
@@ -68,5 +70,6 @@ ActiveRecord::Schema.define(version: 2019_04_12_181745) do
   add_foreign_key "days", "users"
   add_foreign_key "examples", "users"
   add_foreign_key "meals", "users"
+  add_foreign_key "users", "meals", column: "meals_id"
   add_foreign_key "users", "users"
 end
